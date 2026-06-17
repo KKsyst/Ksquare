@@ -52,7 +52,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;}
 .nav-links{display:flex;gap:26px;align-items:center;font-size:13.5px;color:var(--ink-2);}
 .nav-links a:hover{color:var(--vermilion);}
 .nav-cta{display:flex;align-items:center;gap:10px;}
-.btn-nav{padding:11px 18px;background:#06C755;color:#fff;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.03em;transition:transform .2s,box-shadow .2s;}
+.btn-nav{padding:11px 18px;background:#06C755;color:#fff;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.03em;white-space:nowrap;transition:transform .2s,box-shadow .2s;}
 .btn-nav:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(6,199,85,.32);}
 .menu-btn{display:none;width:42px;height:42px;border-radius:9px;background:var(--navy-900);color:#fff;place-items:center;font-size:20px;}
 .mobile-panel{display:none;flex-direction:column;gap:2px;padding:8px var(--pad-x-mb) 16px;background:var(--paper);border-bottom:1px solid var(--line);}
@@ -356,6 +356,8 @@ footer a:hover{color:var(--paper);}
   .faq-detail{grid-template-columns:1fr;gap:6px;}
   .showcase-cap h3{font-size:22px;}
 }
+.sp-br{display:none;}
+@media(max-width:560px){.sp-br{display:inline;}.meeting-body h3{font-size:19px;white-space:nowrap;}.rev-tagline h3{font-size:22px;white-space:nowrap;}}
 .mobile-panel.open{display:flex;}
 </style>
 
@@ -410,9 +412,9 @@ footer a:hover{color:var(--paper);}
       <span class="accent">それは、過去問への<br>接続と分析力の差。</span>
     </h1>
     <p class="lede">
-      頻出分野の列挙にとどまらない、出題パターンまでの研究。<br>
-      1人では補えない「あと数点」を埋める、自分専用の演習。<br>
-      Ksquareは、合格点を最短で取りに行く志望校専門塾です。
+      頻出分野の列挙にとどまらない、<br class="sp-br">出題パターンまでの研究。<br>
+      1人では補えない「あと数点」を埋める、<br class="sp-br">自分専用の演習。<br>
+      Ksquareは、合格点を最短で取りに行く<br class="sp-br">志望校専門塾です。
     </p>
     <!-- gift teaser -->
     <div class="gift">
@@ -502,7 +504,7 @@ footer a:hover{color:var(--paper);}
 
     <div class="rev-tagline">
       <p class="rt-sub">出題者の意図まで読み解いた分析が、</p>
-      <h3>あなたの志望校に合った、<span class="accent">最短学習</span>を提供する。</h3>
+      <h3>あなたの志望校に合った、<br class="sp-br"><span class="accent">最短学習</span>を提供する。</h3>
       <a href="https://lin.ee/ySXxRnl" class="btn btn-line" style="font-size:15px;padding:18px 38px;">無料でこの「分析シート」を受け取る <span class="arrow">↓</span></a>
     </div>
   </div>
@@ -716,7 +718,7 @@ footer a:hover{color:var(--paper);}
   <div class="container">
     <div class="sec-head">
       <div class="eyebrow" style="color:var(--vermilion-2);justify-content:center;">COURSE GUIDE · コース選びの目安</div>
-      <h2 class="section-title" style="color:var(--paper);">結局、どっちのコースが<span class="accent" style="color:var(--vermilion-2);">いいの？</span></h2>
+      <h2 class="section-title" style="color:var(--paper);">結局、どっちの<br class="sp-br">コースが<span class="accent" style="color:var(--vermilion-2);">いいの？</span></h2>
     </div>
     <div class="which-grid">
       <div class="case">
