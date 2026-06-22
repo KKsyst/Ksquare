@@ -22,7 +22,7 @@
   --container:1200px;--pad-x-pc:64px;--pad-x-mb:22px;--rad:14px;--rad-sm:8px;
 }
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html.lenis,html.lenis body{height:auto;}html{scroll-behavior:smooth;}.lenis.lenis-smooth{scroll-behavior:auto!important;}.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain;}.lenis.lenis-stopped{overflow:hidden;}.lenis.lenis-smooth iframe{pointer-events:none;}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"palt" 1;line-height:1.7;font-size:16px;}
 img,svg{max-width:100%;display:block;}
 h1,h2,h3,h4,h5,h6,p,ul,ol,figure{margin:0;padding:0;}
@@ -911,5 +911,21 @@ footer a:hover{color:var(--paper);}
 
 </div>
 
+<!-- Smooth scroll (Lenis) -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || typeof Lenis === 'undefined') return;
+    var lenis = new Lenis({ duration: 1.1, easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
+    function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var id = a.getAttribute('href');
+        if (id.length > 1){ var el = document.querySelector(id); if (el){ e.preventDefault(); lenis.scrollTo(el, { offset: -70 }); } }
+      });
+    });
+  });
+</script>
 </body>
 </html>
