@@ -2584,7 +2584,6 @@ details p {
     font-size: clamp(10px, 3.4vw, 13px);
   }
 
-  .price-solution-heading,
   .env-solution-heading {
     white-space: nowrap;
     font-size: clamp(16px, 6vw, 25px);
@@ -2597,11 +2596,6 @@ details p {
 
   .price-reason-card p {
     font-size: 12.5px;
-  }
-
-  .price-value-block h3 {
-    white-space: nowrap;
-    font-size: clamp(11px, 3.8vw, 15px);
   }
 
   .env-lead {
