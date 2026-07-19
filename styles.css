@@ -2489,7 +2489,7 @@ details p {
   }
 
   .hero-media img {
-    object-position: 100% 20%;
+    object-position: 70% 35%;
   }
 
   .hero-badges {
@@ -2622,9 +2622,15 @@ details p {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 18px 12px;
-    white-space: nowrap;
-    font-size: clamp(10px, 3.4vw, 14px);
+    padding: 16px 12px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    font-size: clamp(13px, 3.6vw, 16px);
+  }
+
+  .cta-band-btn-arrow {
+    display: none;
   }
 
   .cta-offer-badges {
