@@ -786,8 +786,17 @@ h3 {
   top: 96px;
 }
 
-.method-visual img,
 .portrait img {
+  width: 100%;
+  max-height: 560px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.method-visual img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
@@ -1185,6 +1194,10 @@ h3 {
   display: inline-block;
   margin: 0 0 12px;
   color: var(--blue);
+}
+
+.message .message-label.message-label-mobile-top {
+  display: none;
   font-size: 14px;
   font-weight: 950;
 }
@@ -1193,6 +1206,10 @@ h3 {
   margin: 10px 0 18px;
   color: var(--ink);
   font-weight: 900;
+}
+
+.message .message-layout {
+  align-items: center;
 }
 
 .message .message-profile {
@@ -2370,10 +2387,6 @@ details p {
     gap: 24px;
   }
 
-  .weekly-plan-grid {
-    grid-template-columns: 1fr;
-  }
-
   .header-nav {
     display: none;
   }
@@ -2458,6 +2471,9 @@ details p {
   .pain-need-circle {
     width: 150px;
     height: 150px;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 900;
     font-size: 15px;
   }
 
@@ -2486,6 +2502,55 @@ details p {
 
   .footer-inner {
     display: grid;
+  }
+
+  .hero-badges li {
+    flex-basis: 104px;
+    width: 104px;
+    font-size: 15px;
+    border-width: 2px;
+  }
+
+  .cta-offer-badges {
+    gap: 10px;
+  }
+
+  .cta-offer-badge {
+    flex-basis: 108px;
+    width: 108px;
+    border-width: 3px;
+    font-size: 15px;
+  }
+
+  .cta-offer-badge-main {
+    flex-basis: 120px;
+    width: 120px;
+    font-size: 16px;
+  }
+
+  .cta-offer-label {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .cta-offer-line {
+    width: 20px;
+  }
+
+  .solution-heading,
+  .strength-title-oneline,
+  .price-reasons-heading h3,
+  .price-reason-card h4 {
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .price-reasons-sub {
+    gap: 8px 16px;
+  }
+
+  .support-card-img-pair {
+    gap: 8px;
   }
 
   .hero-media img {
@@ -2599,6 +2664,10 @@ details p {
     font-size: 12.5px;
   }
 
+  .price-value-break {
+    display: none;
+  }
+
   .price-value-block h3 {
     white-space: nowrap;
     font-size: clamp(11px, 3.8vw, 15px);
@@ -2613,6 +2682,14 @@ details p {
     display: inline-block;
     white-space: nowrap;
     font-size: clamp(10px, 3.2vw, 12px);
+  }
+
+  .message-label-mobile-top {
+    display: none;
+  }
+
+  .message-label-original {
+    display: none;
   }
 
   .strength-cta {
@@ -2631,32 +2708,6 @@ details p {
     padding: 18px 12px;
     white-space: nowrap;
     font-size: clamp(10px, 3.4vw, 14px);
-  }
-
-  .cta-offer-badges {
-    gap: 10px;
-  }
-
-  .cta-offer-badge {
-    flex-basis: 108px;
-    width: 108px;
-    border-width: 3px;
-    font-size: 15px;
-  }
-
-  .cta-offer-badge-main {
-    flex-basis: 120px;
-    width: 120px;
-    font-size: 16px;
-  }
-
-  .cta-offer-label {
-    font-size: 20px;
-    gap: 8px;
-  }
-
-  .cta-offer-line {
-    width: 20px;
   }
 
   .voices-sub {
